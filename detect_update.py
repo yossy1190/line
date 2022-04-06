@@ -27,7 +27,7 @@ def detect_update():
         with open("old_elem.txt","w") as f:
             old_elem=f.write(new_elem)
         print('更新されました')
-        line.main(f"もうすぐ満席です。リンクを確認してください。\n{url}")
+        line.main(f"もうすぐ満席です。")
         return False
     
 detect_update()
