@@ -31,6 +31,7 @@ def detect_update():
         line.main(f"女性が満席です。リンクを確認してください。\n{url}")
         return True
     else:
+        line.main("更新はありません")
         return False
     
 detect_update()
