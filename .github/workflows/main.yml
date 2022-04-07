@@ -35,4 +35,4 @@ jobs:
       - name: Run script
         run: |
           # main.pyの実行
-          python detect_update.py
+          python detect_update_r.py
