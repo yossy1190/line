@@ -12,27 +12,25 @@ def detect_update():
     
     try:
         femail=soup.select(".female")
-        new_elem=str(soup.select(".type_only_remaining"))
+        # new_elem=str(soup.select(".type_waiting"))        
+        new_elem=str(soup.select(".type_only_remaining"))        
         print(new_elem)
     except:
         new_elem=""
-        
-    try:
-        with open("old_elem.txt") as f:
-            old_elem=f.read()
-    except:
-        old_elem=""
 
-    if new_elem==old_elem:
-        print('更新はありません')
-        line.main(f"更新はありません。")
+# [<span class="type_waiting"> キャンセル待ち</span>]
+    with open("remain_elem.txt","r",encoding='utf-8') as f:
+        remain_elem=f.read()
+        # wating_elem=f.read()
+    # with open("wating_elem.txt","r") as f:
+    #     wating_elem=f.read()
+ 
+    if new_elem==remain_elem:
+        line.main(f"女性がもうすぐ満席です。リンクを確認してください。\n{url}")
         return True
-    
+        # line.main(f"女性が満席です。リンクを確認してください。\n{url}")
+        # return True
     else:
-        with open("old_elem.txt","w") as f:
-            f.write(new_elem)
-        print('もうすぐ満席です。')
-        line.main(f"もうすぐ満席です。リンクを確認してください。\n{url}")
         return False
     
 detect_update()
