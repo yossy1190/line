@@ -6,7 +6,7 @@ import line
 # import utf_8
 
 def detect_update():
-    url="https://www.statusparty.jp/schedule/tokyo/ginza/13019/"
+    url="https://www.statusparty.jp/schedule/tokyo/ginza/13124/"
     res=requests.get(url)
     soup=BeautifulSoup(res.text,"html.parser")
     
