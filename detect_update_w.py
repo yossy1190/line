@@ -19,7 +19,7 @@ def detect_update():
         new_elem=""
 
 # [<span class="type_waiting"> キャンセル待ち</span>]
-    with open("50PS管理ツール/remain_elem.txt","r",encoding='utf-8') as f:
+    with open("remain_elem.txt","r",encoding='utf-8') as f:
         remain_elem=f.read()
         # wating_elem=f.read()
     # with open("wating_elem.txt","r") as f:
